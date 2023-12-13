@@ -1,19 +1,19 @@
 package com.marinavieira.Xadrez;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.marinavieira.boardgame.Board;
-
+import com.marinavieira.chess.ChessMatch;
 
 @SpringBootApplication
 public class XadrezApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(XadrezApplication.class, args);
-	
-			Board board = new Board(8, 8);
-	
-	
+
+		ChessMatch chessMatch = new ChessMatch();
+		UI.printBoard(chessMatch.getPieces());
+
 	}
 
 }

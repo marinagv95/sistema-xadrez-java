@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.Getter;
 
 @Data
-public class ChessPiece extends Piece {
+public abstract class ChessPiece extends Piece {
     @Getter
     private Color color;
 

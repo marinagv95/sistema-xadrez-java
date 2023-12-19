@@ -23,7 +23,7 @@ public class XadrezApplication {
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 
-		while (true) {
+		while (!chessMatch.isCheckMate()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch, captured);
@@ -34,7 +34,6 @@ public class XadrezApplication {
 				boolean[][] possibleMoves = chessMatch.possibleMoves(source);
 				UI.clearScreen();
 				UI.printBoard(chessMatch.getPieces(), possibleMoves);
-
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
@@ -52,9 +51,8 @@ public class XadrezApplication {
 				System.out.println(e.getMessage());
 				sc.nextLine();
 			}
-
 		}
-
+		UI.clearScreen();
+		UI.printMatch(chessMatch, captured);
 	}
-
 }

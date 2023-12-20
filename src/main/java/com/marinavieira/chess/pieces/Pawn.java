@@ -2,7 +2,6 @@ package com.marinavieira.chess.pieces;
 
 import com.marinavieira.boardgame.Board;
 import com.marinavieira.boardgame.Position;
-import com.marinavieira.chess.ChessMatch;
 import com.marinavieira.chess.ChessPiece;
 import com.marinavieira.chess.Color;
 
